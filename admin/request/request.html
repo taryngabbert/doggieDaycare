@@ -1,0 +1,42 @@
+<div class="requestView">
+
+
+<div class="requestDirDiv">
+  <div class="adminRequest"> Your Upcoming Appointments </div>
+  <div class="requestDiv" ng-repeat="request in requests|filter: {status:'Approved'}">
+    <div class="requestTitle">{{request.serviceType}}</div>
+    <div class="leftAlign">
+      <text class="requestLine"><b> Client Name: </b>{{request.serviceFor}}</h4> <br>
+      <text class="requestLine"><b>Date: </b> {{request.date}} </text> <br>
+      <text class="requestLine"><b> Notes: </b> {{request.notes}} </text> <br>
+    </div>
+    <div class="rightAlign">
+      <text class="statusLine"><b>Status: </b> {{request.status}} </text> <br>
+      <text class="statusLine"><b> Payment Status: </b> {{request.payment}} <text> <br>
+    </div>
+    <button class="requestsButton" id="decline" ng-click="decline(request)">Move to Decline</button>
+  </div>
+</div>
+
+
+
+
+<div class="requestDirDiv">
+  <h3 class="adminRequest"> Your Unnapproved Appointments </h3>
+  <div class="requestDiv" ng-repeat="request in requests|filter: {status:'Pending'}">
+    <h3>{{request.serviceType}}</h3>
+    <text class="requestLine"><b> Client Name: </b>{{request.serviceFor}}</h4> <br>
+    <text class="requestLine"><b>Date: </b> {{request.date}} </text> <br>
+    <text class="requestLine"><b> Notes: </b> {{request.notes}} </text> <br>
+    <text class="statusLine"><b>Status: </b> {{request.status}} </text>
+    <text class="statusLine"><b> Payment Status: </b> {{request.payment}} <text> <br>
+    <button class="requestButton" id="approve" ng-click="approve(request)"> Approve </button>
+
+
+
+    <button class="requestsButton" id="decline" ng-click="decline(request)">Decline</button>
+  </div>
+</div>
+
+
+</div>

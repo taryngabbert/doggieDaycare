@@ -1,0 +1,64 @@
+<user-nav-bar></user-nav-bar>
+<div class="userRequest">
+
+
+  <div layout="column" ng-cloak class="md-inline-form">
+    <h4>Please fill out Dog Profile:</h4>
+    <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+      <div>
+        <md-input-container>
+          <label>Dogs Name</label>
+          <input class="md-block" ng-model="dogName" required>
+        </md-input-container>
+      </div>
+    </md-content>
+    <md-content layout-padding>
+
+        <form name="userForm">
+          <md-input-container class="md-block">
+            <label>Birthday or age:</label>
+            <input ng-model="birthday" required>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Breed</label>
+            <input ng-model="breed" required>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label>Weight</label>
+            <input ng-model="weight" required>
+          </md-input-container>
+
+            <md-input-container class="md-block">
+              <label>Vet Name:</label>
+              <input ng-model="vet" required>
+            </md-input-container>
+            <md-input-container class="md-block" >
+              <label>Image URL:</label>
+              <input ng-model="imageUrl" required>
+            </md-input-container>
+            <md-input-container class="md-block">
+              <label>Gender:</label>
+              <md-select ng-model="gender" required>
+                <md-option ng-repeat="x in genders" value="{{x}}">
+                  {{x}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+            <md-input-container class="md-block">
+             <label>Dog Description:</label>
+             <textarea placeholder="Descripe their personality here.." ng-model="description" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+           </md-input-container>
+           <md-input-container class="md-block">
+            <label>Special Notes:</label>
+            <textarea placeholder="Allergies, medications, anything we need to know.." ng-model="specialDetails" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+          </md-input-container>
+
+
+        </form>
+
+
+
+  </md-content>
+</div>
+<button ng-click="addDogProfile()">Submit</button>
+</div>

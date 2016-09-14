@@ -1,0 +1,48 @@
+
+
+<div class="dogProfiles">
+  <div class="flexProfile">
+    <div ng-repeat="data in userData">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div >
+              <div class="col-md-12 lead">Dog Profile<hr></div>
+            </div>
+            <div >
+  			<div class="col-md-4 text-center">
+                <img class="img-circle avatar avatar-original" style="-webkit-user-select:none;
+                display:block; margin:auto;" ng-src="{{data.imageUrl}}">
+              </div>
+              <div class="col-md-8">
+                <div>
+                  <div class="col-md-12">
+                    <h1 class="only-bottom-margin">{{data.dogName}}</h1>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="col-md-12">
+                    <span class="text-muted">Birthday:</span> {{data.birthday}}<br>
+                    <span class="text-muted">Gender:</span> {{data.gender}}<br>
+                    <span class="text-muted">Breed:</span> {{data.breed}}<br>
+                    <span class="text-muted">Weight:</span> {{data.weight}} <br>
+                    <span class="text-muted">Description:</span> {{data.description}} <br>
+                    <span class="text-muted">Special Notes:</span> {{data.specialNotes}} <br><br>
+
+                    <small class="text-muted">Vaccination Status: {{data.vaccinations}}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="col-md-12">
+                <hr><button class="btn btn-default pull-right"><i class="glyphicon glyphicon-pencil"></i> Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
